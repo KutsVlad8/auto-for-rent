@@ -1,6 +1,8 @@
 // import React, { useState } from 'react';
 import Select from 'react-select';
 import Button from '../Button/Button';
+import { FilterContainer } from './FilterBar.styled';
+import customStyles from './FilterBar.styled';
 
 function FilterBar() {
   // Создайте состояния для выбранных значений для каждого селекта
@@ -29,10 +31,11 @@ function FilterBar() {
   ];
 
   return (
-    <div>
+    <FilterContainer>
       <label>
         Car brand
         <Select
+          styles={customStyles}
           // value={selectedOption1}
           // onChange={setSelectedOption1}
           options={options1}
@@ -42,6 +45,7 @@ function FilterBar() {
       <label>
         Price/1 hour
         <Select
+          styles={customStyles}
           // value={selectedOption2}
           // onChange={setSelectedOption2}
           options={options2}
@@ -50,7 +54,7 @@ function FilterBar() {
       </label>
 
       <Button text={'Search'} />
-    </div>
+    </FilterContainer>
   );
 }
 
