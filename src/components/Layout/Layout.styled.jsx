@@ -7,3 +7,12 @@ export const Container = styled.div`
   margin-right: auto;
   padding: 15px;
 `;
+
+export const MainContainer = styled.div`
+  display: flex;
+  align-items: stretch;
+`;
+
+export const ContentContainer = styled.div`
+  flex: 1;
+`;
