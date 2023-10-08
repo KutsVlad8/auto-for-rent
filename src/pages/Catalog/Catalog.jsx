@@ -1,9 +1,10 @@
-import { Title } from './Catalog.styled';
+import CarsList from '../../components/CarsList/CarsList';
+import cars from '../../data/cars.json';
 
 const Catalog = () => {
   return (
     <>
-      <Title>Catalog </Title>
+      <CarsList cars={cars} />
     </>
   );
 };
