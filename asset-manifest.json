@@ -1,13 +1,19 @@
 {
   "files": {
     "main.css": "/auto-for-rent/static/css/main.7acaea2f.css",
-    "main.js": "/auto-for-rent/static/js/main.5fc03a12.js",
+    "main.js": "/auto-for-rent/static/js/main.7bca1b88.js",
+    "static/js/485.b1979451.chunk.js": "/auto-for-rent/static/js/485.b1979451.chunk.js",
+    "static/js/101.d21c09f4.chunk.js": "/auto-for-rent/static/js/101.d21c09f4.chunk.js",
+    "static/js/241.26f3cc30.chunk.js": "/auto-for-rent/static/js/241.26f3cc30.chunk.js",
     "index.html": "/auto-for-rent/index.html",
     "main.7acaea2f.css.map": "/auto-for-rent/static/css/main.7acaea2f.css.map",
-    "main.5fc03a12.js.map": "/auto-for-rent/static/js/main.5fc03a12.js.map"
+    "main.7bca1b88.js.map": "/auto-for-rent/static/js/main.7bca1b88.js.map",
+    "485.b1979451.chunk.js.map": "/auto-for-rent/static/js/485.b1979451.chunk.js.map",
+    "101.d21c09f4.chunk.js.map": "/auto-for-rent/static/js/101.d21c09f4.chunk.js.map",
+    "241.26f3cc30.chunk.js.map": "/auto-for-rent/static/js/241.26f3cc30.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.5fc03a12.js"
+    "static/js/main.7bca1b88.js"
   ]
 }
