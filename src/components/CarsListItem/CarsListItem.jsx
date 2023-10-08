@@ -1,16 +1,28 @@
-import { Item, CardThumb, CardImg, Cardcontent } from './CarsListItem.styled';
+import {
+  Item,
+  CardThumb,
+  CardImg,
+  Cardcontent,
+  Model,
+  Price,
+} from './CarsListItem.styled';
+
+import Button from '../Button/Button';
 
 const CarsListItem = ({ car }) => {
   return (
     <Item>
       <CardThumb>
-        <CardImg src={car.img} alt={car.make} width="401" height="268" />
+        <CardImg src={car.img} alt={car.make} />
         <Cardcontent>
           <p>
-            {car.make} {car.model},{car.year} {car.rentalPrice}
+            {car.make} <Model>{car.model}</Model>,{car.year}
+            <Price>{car.rentalPrice}</Price>
           </p>
         </Cardcontent>
       </CardThumb>
+
+      <Button text={'Learn more'} />
     </Item>
   );
 };
