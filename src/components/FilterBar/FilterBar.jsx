@@ -53,7 +53,7 @@ function FilterBar() {
         />
       </label>
 
-      <Button text={'Search'} />
+      <Button text={'Search'} width={'136px'} height={'48px'} type={'submit'} />
     </FilterContainer>
   );
 }

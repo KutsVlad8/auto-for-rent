@@ -11,6 +11,7 @@ export const Container = styled.div`
 export const MainContainer = styled.div`
   display: flex;
   align-items: stretch;
+  margin-top: 30px;
 `;
 
 export const ContentContainer = styled.div`

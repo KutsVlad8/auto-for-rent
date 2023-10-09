@@ -3,8 +3,11 @@ import styled from '@emotion/styled';
 export const Head = styled.header`
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 150px;
   padding: 8px;
 
-  background-color: #cccccc;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  background-color: #939393;
 `;

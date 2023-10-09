@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 
 export const Btn = styled.button`
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+
   color: #fff;
   font-family: Manrope;
   font-size: 14px;
