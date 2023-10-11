@@ -87,10 +87,14 @@ export const AttributeListItem = styled.li`
   }
 `;
 
-export const Btn = styled.button`
-  width: 100%;
+export const Btn = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 168px;
   height: 44px;
 
+  text-decoration: none;
   color: #fff;
   font-family: Manrope;
   font-size: 14px;

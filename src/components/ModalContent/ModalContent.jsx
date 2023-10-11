@@ -87,8 +87,7 @@ export const ModalContent = ({
           <RentalListItem>Millage: {mileage}</RentalListItem>
           <RentalListItem>Price: {rentalPrice}</RentalListItem>
         </RentalList>
-
-        <Btn>Rental Car</Btn>
+        <Btn href="tel:+380730000000">Rental Car</Btn>
       </Cardcontent>
     </CardThumb>
   );
