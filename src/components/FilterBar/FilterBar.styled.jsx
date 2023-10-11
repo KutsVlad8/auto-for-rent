@@ -6,6 +6,7 @@ export const Form = styled.form`
   align-items: center;
   gap: 30px;
   margin-top: 100px;
+  margin-bottom: 50px;
 `;
 
 const customStyles = {
