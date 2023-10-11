@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
-// import Header from 'components/Header/Header';
+
 import SideBar from 'components/SideBar/SideBar';
 import { Outlet } from 'react-router-dom';
-// import Footer from 'components/Footer/Footer';
+
 import {
   MainContainer,
   ContentContainer,
@@ -14,8 +14,6 @@ import {
 const Layout = () => {
   return (
     <BodyContainer>
-      {/* <Header /> */}
-
       <main>
         <MainContainer>
           <ContentContainer>
@@ -26,7 +24,6 @@ const Layout = () => {
           <SideBar></SideBar>
         </MainContainer>
       </main>
-      {/* <Footer /> */}
     </BodyContainer>
   );
 };
