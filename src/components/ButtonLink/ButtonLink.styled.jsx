@@ -5,8 +5,8 @@ export const BtnLink = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 34px;
+  width: 115px;
+  height: 26px;
 
   padding: 14px 44px;
   margin-left: auto;
@@ -14,7 +14,7 @@ export const BtnLink = styled(NavLink)`
 
   color: #fff;
   font-family: Manrope;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 1.42;

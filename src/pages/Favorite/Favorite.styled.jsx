@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 
 export const Text = styled.p`
-  margin-top: 8px;
+  margin-bottom: 50px;
+  margin-top: 50px;
   text-align: center;
-  color: darkslategray;
+  color: black;
+  font-size: 30px;
 `;

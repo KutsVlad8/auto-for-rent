@@ -9,48 +9,97 @@ import {
   Price,
   AttributeList,
   AttributeListItem,
+  Btn,
 } from './CarsListItem.styled';
-
-import Button from '../Button/Button';
+import { useState } from 'react';
+import Modal from '../Modal/Modal';
+import ModalContent from 'components/ModalContent/ModalContent';
 import { locationCity, locationCountry } from '../../utils';
 
 const CarsListItem = ({ car }) => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const handleOpenModal = () => {
+    const body = document.querySelector('body');
+    body.style.overflow = 'hidden';
+    setIsOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    const body = document.querySelector('body');
+    body.style.overflow = 'auto';
+    setIsOpenModal(false);
+  };
+
+  const {
+    make,
+    model,
+    year,
+    rentalPrice,
+    address,
+    rentalCompany,
+    type,
+    img,
+    id,
+    accessories,
+    description,
+    functionalities,
+    mileage,
+    rentalConditions,
+  } = car;
+
   return (
-    <Item>
-      <CardThumb>
-        <CardImg src={car.img} alt={car.make} width={274} height={268} />
-        <Cardcontent>
-          <TitleList>
-            <TitleListItem>
-              {car.make} <Model>{car.model}</Model>,{car.year}
-            </TitleListItem>
-            <TitleListItem>
-              <Price>{car.rentalPrice}</Price>
-            </TitleListItem>
-          </TitleList>
+    <>
+      <Item>
+        <CardThumb>
+          <CardImg src={img} alt={make} width={274} height={268} />
+          <Cardcontent>
+            <TitleList>
+              <TitleListItem>
+                {make} <Model>{model}</Model>,{year}
+              </TitleListItem>
+              <TitleListItem>
+                <Price>{rentalPrice}</Price>
+              </TitleListItem>
+            </TitleList>
 
-          <AttributeList>
-            <AttributeListItem>{locationCity(car.address)}</AttributeListItem>
+            <AttributeList>
+              <AttributeListItem>{locationCity(address)}</AttributeListItem>
 
-            <AttributeListItem>
-              {locationCountry(car.address)}
-            </AttributeListItem>
-            <AttributeListItem>{car.rentalCompany}</AttributeListItem>
+              <AttributeListItem>{locationCountry(address)}</AttributeListItem>
+              <AttributeListItem>{rentalCompany}</AttributeListItem>
 
-            <AttributeListItem>{car.type}</AttributeListItem>
-            <AttributeListItem>{car.make}</AttributeListItem>
-            <AttributeListItem>{car.id}</AttributeListItem>
-            <AttributeListItem>{car.accessories[0]}</AttributeListItem>
-          </AttributeList>
-          <Button
-            text={'Learn more'}
-            width={'100%'}
-            height={'44px'}
-            type={'button'}
-          />
-        </Cardcontent>
-      </CardThumb>
-    </Item>
+              <AttributeListItem>{type}</AttributeListItem>
+              <AttributeListItem>{make}</AttributeListItem>
+              <AttributeListItem>{id}</AttributeListItem>
+              <AttributeListItem>{accessories[0]}</AttributeListItem>
+            </AttributeList>
+            <Btn onClick={handleOpenModal}>Learn more</Btn>
+          </Cardcontent>
+        </CardThumb>
+
+        {isOpenModal && (
+          <Modal onClose={handleCloseModal}>
+            <ModalContent
+              id={id}
+              img={img}
+              make={make}
+              model={model}
+              year={year}
+              type={type}
+              rentalPrice={rentalPrice}
+              address={address}
+              rentalCompany={rentalCompany}
+              accessories={accessories}
+              description={description}
+              functionalities={functionalities}
+              mileage={mileage}
+              rentalConditions={rentalConditions}
+            />
+          </Modal>
+        )}
+      </Item>
+    </>
   );
 };
 

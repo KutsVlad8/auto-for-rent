@@ -6,5 +6,4 @@ export const List = styled.ul`
   gap: 30px;
 
   list-style: none;
-  padding: 0px 125px 0px 30px;
 `;

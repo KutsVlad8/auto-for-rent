@@ -6,7 +6,7 @@ const Favorite = () => {
     <>
       <div>
         <Text> Go to the catalog to select a car</Text>
-        <ButtonLink text={'catalog'} />
+        <ButtonLink text={'Go to catalog'} />
       </div>
     </>
   );

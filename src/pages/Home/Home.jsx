@@ -1,9 +1,13 @@
-// import { useEffect, useState } from 'react';
-// import { getDayTrending } from '../../components/servise/Api';
-import { Hero } from './Home.styled';
+import { Hero, Title } from './Home.styled';
+import ButtonLink from 'components/ButtonLink/ButtonLink';
 
 const Home = () => {
-  return <Hero></Hero>;
+  return (
+    <Hero>
+      <Title> Go to the catalog to select a car</Title>
+      <ButtonLink text={'Go to catalog'} />
+    </Hero>
+  );
 };
 
 export default Home;

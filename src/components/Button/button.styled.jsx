@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Btn = styled.button`
+  display: block;
   width: ${({ width }) => width};
   height: ${({ height }) => height};
 
