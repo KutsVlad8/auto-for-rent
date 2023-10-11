@@ -1,17 +1,26 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div`
-  width: 1200px;
+export const BodyContainer = styled.div`
+  width: 1440px;
 
   margin-left: auto;
   margin-right: auto;
-  padding: 15px;
+
+  padding-left: 20px;
+  padding-right: 20px;
 `;
+
+// export const Container = styled.div`
+//   width: 1200px;
+
+//   margin-left: auto;
+//   margin-right: auto;
+//   padding: 15px;
+// `;
 
 export const MainContainer = styled.div`
   display: flex;
   align-items: stretch;
-  margin-top: 30px;
 `;
 
 export const ContentContainer = styled.div`

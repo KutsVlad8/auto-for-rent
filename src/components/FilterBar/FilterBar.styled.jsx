@@ -5,6 +5,7 @@ export const FilterContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 30px;
+  margin-top: 150px;
 `;
 
 const customStyles = {
