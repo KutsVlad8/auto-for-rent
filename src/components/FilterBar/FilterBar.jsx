@@ -10,9 +10,6 @@ function FilterBar() {
   const [selectedOption1, setSelectedOption1] = useState(null);
   const [selectedOption2, setSelectedOption2] = useState(null);
 
-  console.log(selectedOption1);
-  console.log(selectedOption2);
-
   // Определите опции для каждого селекта
   const options1 = [
     { value: 'option1', label: 'Porshe' },
