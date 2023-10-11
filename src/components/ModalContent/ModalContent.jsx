@@ -1,4 +1,5 @@
 import React from 'react';
+import { nanoid } from 'nanoid';
 
 import {
   CardThumb,
@@ -11,6 +12,11 @@ import {
   AttributeList,
   AttributeListItem,
   Btn,
+  Text,
+  AcessList,
+  AcessListItem,
+  RentalList,
+  RentalListItem,
 } from './ModalContent.styled';
 import { locationCity, locationCountry } from '../../utils';
 
@@ -31,8 +37,6 @@ export const ModalContent = ({
   rentalConditions,
 }) => {
   const parts = rentalConditions.split('\n');
-
-  console.log(parts);
 
   return (
     <CardThumb>
@@ -59,30 +63,30 @@ export const ModalContent = ({
           <AttributeListItem>{accessories}</AttributeListItem>
         </AttributeList>
 
-        <p>{description}</p>
+        <Text>{description}</Text>
 
-        <p>Accessories and functionalities:</p>
-        <ul>
+        <Text>Accessories and functionalities:</Text>
+        <AcessList>
           {accessories.map(acess => (
-            <li>{acess}</li>
+            <AcessListItem key={nanoid(2)}>{acess}</AcessListItem>
           ))}
-        </ul>
+        </AcessList>
 
-        <ul>
+        <AcessList>
           {functionalities.map(func => (
-            <li>{func}</li>
+            <AcessListItem key={nanoid(2)}>{func}</AcessListItem>
           ))}
-        </ul>
+        </AcessList>
 
-        <p>Rental Conditions:</p>
-        <ul>
+        <Text>Rental Conditions:</Text>
+        <RentalList>
           {parts.map(part => (
-            <li>{part}</li>
+            <RentalListItem key={nanoid(2)}>{part}</RentalListItem>
           ))}
 
-          <li>{mileage}</li>
-          <li>{rentalPrice}</li>
-        </ul>
+          <RentalListItem>Millage: {mileage}</RentalListItem>
+          <RentalListItem>Price: {rentalPrice}</RentalListItem>
+        </RentalList>
 
         <Btn>Rental Car</Btn>
       </Cardcontent>

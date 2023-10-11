@@ -105,3 +105,67 @@ export const Btn = styled.button`
   border: none;
   cursor: pointer;
 `;
+
+export const Text = styled.p`
+  color: #121417;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42;
+`;
+
+export const AcessList = styled.ul`
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+  margin-top: 8px;
+`;
+
+export const AcessListItem = styled.li`
+  position: relative;
+  margin-right: 12px;
+
+  color: rgba(18, 20, 23, 0.5);
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -6px;
+    width: 1px;
+    height: 15px;
+
+    background-color: rgba(18, 20, 23, 0.5);
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+`;
+
+export const RentalList = styled.ul`
+  list-style: none;
+  padding: 0px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+`;
+
+export const RentalListItem = styled.li`
+  background-color: #d5d2d2;
+  padding: 8px;
+  border-radius: 4px;
+`;
