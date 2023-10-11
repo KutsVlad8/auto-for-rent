@@ -1,4 +1,4 @@
-import { Text } from './Favorite.styled';
+import { Text, Container } from './Favorite.styled';
 import ButtonLink from 'components/ButtonLink/ButtonLink';
 import { useSelector } from 'react-redux';
 import { getFavorites } from '../../redux/selectors';
@@ -10,22 +10,23 @@ const Favorite = () => {
   const favorite = useSelector(getFavorites);
 
   return (
-    <>
-      <div>
-        {favorite.length === 0 ? (
-          <>
-            <Text> Go to the catalog to select a car</Text>
-            <ButtonLink text={'Go to catalog'} />
-          </>
-        ) : (
-          <List>
-            {favorite.map(fav => (
-              <CarsListItem key={fav.id} car={fav}></CarsListItem>
-            ))}
-          </List>
-        )}
-      </div>
-    </>
+    <Container>
+      {favorite.length === 0 ? (
+        <>
+          <Text>
+            Sorry, at the moment, our catalog doesn't have any available cars.
+          </Text>
+          <Text>Please return to the catalog to add cars.</Text>
+          <ButtonLink text={'Go to catalog'} />
+        </>
+      ) : (
+        <List>
+          {favorite.map(fav => (
+            <CarsListItem key={fav.id} car={fav}></CarsListItem>
+          ))}
+        </List>
+      )}
+    </Container>
   );
 };
 
