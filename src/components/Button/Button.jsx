@@ -1,4 +1,4 @@
-import { Btn } from './Button.styled';
+import { Btn } from './button.styled';
 
 const Button = ({ text, width, height, type }) => {
   return (
