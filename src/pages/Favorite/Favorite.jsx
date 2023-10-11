@@ -1,16 +1,22 @@
-import { Text, Container } from './Favorite.styled';
+import { Text, Container, Btn } from './Favorite.styled';
+import CarsList from '../../components/CarsList/CarsList';
 import ButtonLink from 'components/ButtonLink/ButtonLink';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 import { getFavorites } from '../../redux/selectors';
-import CarsListItem from '../../components/CarsListItem/CarsListItem';
-
-import { List } from './Favorite.styled';
 
 const Favorite = () => {
+  const [displayedCars, setDisplayedItems] = useState(8);
   const favorite = useSelector(getFavorites);
 
+  const visibleCars = favorite.slice(0, displayedCars);
+
+  const loadMore = () => {
+    setDisplayedItems(prevCount => prevCount + 8);
+  };
+
   return (
-    <Container>
+    <>
       {favorite.length === 0 ? (
         <>
           <Text>
@@ -20,13 +26,15 @@ const Favorite = () => {
           <ButtonLink text={'Go to catalog'} />
         </>
       ) : (
-        <List>
-          {favorite.map(fav => (
-            <CarsListItem key={fav.id} car={fav}></CarsListItem>
-          ))}
-        </List>
+        <>
+          <CarsList cars={visibleCars}></CarsList>
+
+          {displayedCars < favorite.length ? (
+            <Btn onClick={loadMore}>Load more </Btn>
+          ) : null}
+        </>
       )}
-    </Container>
+    </>
   );
 };
 

@@ -4,10 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getCars } from '../../redux/selectors';
 import { useEffect, useState } from 'react';
 import { fetchCars } from '../../redux/operations';
-import { Btn } from './Catalog.styled';
+import { Container, Btn } from './Catalog.styled';
 
 const Catalog = () => {
-  const [displayedItems, setDisplayedItems] = useState(8);
+  const [displayedCars, setDisplayedItems] = useState(8);
   const dispach = useDispatch();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Catalog = () => {
   }, [dispach]);
 
   const cars = useSelector(getCars);
-  const visibleCars = cars.slice(0, displayedItems);
+  const visibleCars = cars.slice(0, displayedCars);
 
   const loadMore = () => {
     setDisplayedItems(prevCount => prevCount + 8);
@@ -26,7 +26,7 @@ const Catalog = () => {
       <FilterBar />
       <CarsList cars={visibleCars} />
 
-      {displayedItems < cars.length ? (
+      {displayedCars < cars.length ? (
         <Btn onClick={loadMore}>Load more </Btn>
       ) : null}
     </>

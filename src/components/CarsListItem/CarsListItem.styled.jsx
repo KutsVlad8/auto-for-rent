@@ -53,6 +53,7 @@ export const Price = styled.span``;
 export const AttributeList = styled.ul`
   list-style: none;
   padding: 0px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -120,4 +121,9 @@ export const FavBtn = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+`;
+
+export const Svg = styled.svg`
+  width: 18px;
+  height: 18px;
 `;

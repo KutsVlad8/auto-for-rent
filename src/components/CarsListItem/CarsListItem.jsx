@@ -11,6 +11,7 @@ import {
   AttributeListItem,
   Btn,
   FavBtn,
+  Svg,
 } from './CarsListItem.styled';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -100,15 +101,15 @@ const CarsListItem = ({ car }) => {
 
             {isFavorite ? (
               <FavBtn onClick={handleToggleFavorite}>
-                <svg>
+                <Svg>
                   <use href={sprite + `#icon-active-heart`}></use>
-                </svg>
+                </Svg>
               </FavBtn>
             ) : (
               <FavBtn onClick={handleToggleFavorite}>
-                <svg>
+                <Svg>
                   <use href={sprite + `#icon-heart-white`}></use>
-                </svg>
+                </Svg>
               </FavBtn>
             )}
           </Cardcontent>

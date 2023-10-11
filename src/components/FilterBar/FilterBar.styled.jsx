@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 
-export const FilterContainer = styled.div`
+export const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 150px;
+  margin-top: 100px;
 `;
 
 const customStyles = {
