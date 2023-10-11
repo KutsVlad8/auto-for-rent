@@ -4,7 +4,7 @@ export const FooTer = styled.footer`
   height: 50px;
   padding: 8px;
 
-  background-color: #cccccc;
+  background-color: #939393;
 `;
 
 export const Text = styled.p`

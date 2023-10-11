@@ -1,9 +1,13 @@
-import { Title } from './Favorite.styled';
+import { Text } from './Favorite.styled';
+import ButtonLink from 'components/ButtonLink/ButtonLink';
 
 const Favorite = () => {
   return (
     <>
-      <Title>Favorite </Title>
+      <div>
+        <Text> Go to the catalog to select a car</Text>
+        <ButtonLink text={'Go to catalog'} />
+      </div>
     </>
   );
 };

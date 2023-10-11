@@ -1,14 +1,27 @@
-import { NavBar, Navigation, NavigationItem } from './SideBar.styled';
+import { Aside, Navigation, NavigationItem, Svg } from './SideBar.styled';
+import sprite from '../../images/sprite.svg';
 
 const SideBar = () => {
   return (
-    <NavBar>
+    <Aside>
       <Navigation>
-        <NavigationItem to="/">Home</NavigationItem>
-        <NavigationItem to="/catalog">Catalog</NavigationItem>
-        <NavigationItem to="/favorite">Favorite</NavigationItem>
+        <NavigationItem to="/">
+          <Svg>
+            <use href={sprite + `#icon-home`}></use>
+          </Svg>
+        </NavigationItem>
+        <NavigationItem to="/catalog">
+          <Svg>
+            <use href={sprite + `#icon-car`}></use>
+          </Svg>
+        </NavigationItem>
+        <NavigationItem to="/favorite">
+          <Svg>
+            <use href={sprite + `#icon-heart`}></use>
+          </Svg>
+        </NavigationItem>
       </Navigation>
-    </NavBar>
+    </Aside>
   );
 };
 

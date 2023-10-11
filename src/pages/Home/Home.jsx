@@ -1,13 +1,12 @@
-// import MoviesList from 'components/MoviesList/MoviesList';
-// import { useEffect, useState } from 'react';
-// import { getDayTrending } from '../../components/servise/Api';
-import { Title } from './Home.styled';
+import { Hero, Title } from './Home.styled';
+import ButtonLink from 'components/ButtonLink/ButtonLink';
 
 const Home = () => {
   return (
-    <>
-      <Title>Home </Title>
-    </>
+    <Hero>
+      <Title> Go to the catalog to select a car</Title>
+      <ButtonLink text={'Go to catalog'} />
+    </Hero>
   );
 };
 

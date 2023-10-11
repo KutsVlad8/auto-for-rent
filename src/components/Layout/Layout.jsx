@@ -1,17 +1,20 @@
 import { Suspense } from 'react';
-import Header from 'components/Header/Header';
-// import SideBar from 'components/Header/Header';
+// import Header from 'components/Header/Header';
+import SideBar from 'components/SideBar/SideBar';
 import { Outlet } from 'react-router-dom';
-import Footer from 'components/Footer/Footer';
+// import Footer from 'components/Footer/Footer';
+import {
+  MainContainer,
+  ContentContainer,
+  BodyContainer,
+} from './Layout.styled';
 
-import { MainContainer, ContentContainer } from './Layout.styled';
-import SideBar from '../SideBar/SideBar';
 // import { Loader } from 'components/Loader/Loader';
 
 const Layout = () => {
   return (
-    <>
-      <Header />
+    <BodyContainer>
+      {/* <Header /> */}
 
       <main>
         <MainContainer>
@@ -20,11 +23,11 @@ const Layout = () => {
               <Outlet />
             </Suspense>
           </ContentContainer>
-          <SideBar />
+          <SideBar></SideBar>
         </MainContainer>
       </main>
-      <Footer />
-    </>
+      {/* <Footer /> */}
+    </BodyContainer>
   );
 };
 
