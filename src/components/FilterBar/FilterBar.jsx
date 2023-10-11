@@ -6,11 +6,9 @@ import { Form } from './FilterBar.styled';
 import customStyles from './FilterBar.styled';
 
 function FilterBar() {
-  // Создайте состояния для выбранных значений для каждого селекта
   const [selectedOption1, setSelectedOption1] = useState(null);
   const [selectedOption2, setSelectedOption2] = useState(null);
 
-  // Определите опции для каждого селекта
   const options1 = [
     { value: 'option1', label: 'Porshe' },
     { value: 'option2', label: 'Volvo' },
