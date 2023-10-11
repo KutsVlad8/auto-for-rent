@@ -122,3 +122,8 @@ export const FavBtn = styled.button`
   border: none;
   cursor: pointer;
 `;
+
+export const Svg = styled.svg`
+  width: 18px;
+  height: 18px;
+`;

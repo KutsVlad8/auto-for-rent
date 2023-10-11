@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const FilterContainer = styled.div`
+export const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
