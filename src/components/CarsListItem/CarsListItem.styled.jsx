@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Item = styled.li`
+  position: relative;
   flex-basis: calc((100% - 3 * 30px) / 4);
 
   border-radius: 4px;
@@ -102,6 +103,21 @@ export const Btn = styled.button`
   background: #3470ff;
 
   outline: none;
+  border: none;
+  cursor: pointer;
+`;
+
+export const FavBtn = styled.button`
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 `;

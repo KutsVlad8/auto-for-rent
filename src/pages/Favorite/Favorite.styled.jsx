@@ -7,3 +7,11 @@ export const Text = styled.p`
   color: black;
   font-size: 30px;
 `;
+
+export const List = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  list-style: none;
+`;
