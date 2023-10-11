@@ -7,19 +7,9 @@ export const BodyContainer = styled.div`
   margin-right: auto;
 `;
 
-// export const Container = styled.div`
-//   width: 1200px;
-
-//   margin-left: auto;
-//   margin-right: auto;
-//   padding: 15px;
-// `;
-
 export const MainContainer = styled.div`
-  display: flex;
-  align-items: stretch;
-`;
-
-export const ContentContainer = styled.div`
-  flex: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 `;

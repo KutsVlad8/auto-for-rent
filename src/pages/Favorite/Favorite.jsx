@@ -16,7 +16,7 @@ const Favorite = () => {
   };
 
   return (
-    <Container>
+    <>
       {favorite.length === 0 ? (
         <>
           <Text>
@@ -34,7 +34,7 @@ const Favorite = () => {
           ) : null}
         </>
       )}
-    </Container>
+    </>
   );
 };
 
