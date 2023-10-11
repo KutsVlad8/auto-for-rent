@@ -53,6 +53,7 @@ export const Price = styled.span``;
 export const AttributeList = styled.ul`
   list-style: none;
   padding: 0px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
