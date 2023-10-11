@@ -1,4 +1,4 @@
-import { Text, Container, Btn } from './Favorite.styled';
+import { Text, Btn } from './Favorite.styled';
 import CarsList from '../../components/CarsList/CarsList';
 import ButtonLink from 'components/ButtonLink/ButtonLink';
 import { useSelector } from 'react-redux';

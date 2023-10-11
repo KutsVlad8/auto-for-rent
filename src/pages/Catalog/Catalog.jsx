@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getCars } from '../../redux/selectors';
 import { useEffect, useState } from 'react';
 import { fetchCars } from '../../redux/operations';
-import { Container, Btn } from './Catalog.styled';
+import { Btn } from './Catalog.styled';
 
 const Catalog = () => {
   const [displayedCars, setDisplayedItems] = useState(8);
