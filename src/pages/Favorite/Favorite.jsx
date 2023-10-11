@@ -20,7 +20,6 @@ const Favorite = () => {
 
   return (
     <>
-      <FilterBar />
       {favorite.length === 0 ? (
         <>
           <Text>
@@ -31,6 +30,7 @@ const Favorite = () => {
         </>
       ) : (
         <>
+          <FilterBar />
           <CarsList cars={visibleCars}></CarsList>
 
           {displayedCars < favorite.length ? (
