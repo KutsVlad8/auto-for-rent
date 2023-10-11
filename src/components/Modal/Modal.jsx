@@ -1,9 +1,9 @@
 import React from 'react';
-
 import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
+
 import { Backdrop, ModalContent, BtnClose, Svg } from './Modal.styled';
 import sprite from '../../images/sprite.svg';
-import { createPortal } from 'react-dom';
 
 const modalRoot = document.querySelector('#modal-root');
 

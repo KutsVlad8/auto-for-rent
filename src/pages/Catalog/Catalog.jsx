@@ -1,9 +1,10 @@
-import CarsList from '../../components/CarsList/CarsList';
-import FilterBar from '../../components/FilterBar/FilterBar';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCars } from '../../redux/selectors';
 import { useEffect, useState } from 'react';
 import { fetchCars } from '../../redux/operations';
+
+import CarsList from '../../components/CarsList/CarsList';
+import FilterBar from '../../components/FilterBar/FilterBar';
 import { Btn } from './Catalog.styled';
 
 const Catalog = () => {

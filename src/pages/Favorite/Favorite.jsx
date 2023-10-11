@@ -1,10 +1,12 @@
-import { Text, Btn } from './Favorite.styled';
-import CarsList from '../../components/CarsList/CarsList';
-import ButtonLink from 'components/ButtonLink/ButtonLink';
-import FilterBar from '../../components/FilterBar/FilterBar';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { getFavorites } from '../../redux/selectors';
+
+import CarsList from '../../components/CarsList/CarsList';
+import ButtonLink from 'components/ButtonLink/ButtonLink';
+import FilterBar from '../../components/FilterBar/FilterBar';
+
+import { Text, Btn } from './Favorite.styled';
 
 const Favorite = () => {
   const [displayedCars, setDisplayedItems] = useState(8);

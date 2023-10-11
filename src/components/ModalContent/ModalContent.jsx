@@ -1,6 +1,7 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 
+import { locationCity, locationCountry } from '../../utils';
 import {
   CardThumb,
   CardImg,
@@ -18,7 +19,6 @@ import {
   RentalList,
   RentalListItem,
 } from './ModalContent.styled';
-import { locationCity, locationCountry } from '../../utils';
 
 export const ModalContent = ({
   id,

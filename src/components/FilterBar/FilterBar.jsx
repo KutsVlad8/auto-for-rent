@@ -1,9 +1,9 @@
-// import React, { useState } from 'react';
+import { useState } from 'react';
 import Select from 'react-select';
+
 import Button from '../Button/Button';
 import { Form } from './FilterBar.styled';
 import customStyles from './FilterBar.styled';
-import { useState } from 'react';
 
 function FilterBar() {
   // Создайте состояния для выбранных значений для каждого селекта

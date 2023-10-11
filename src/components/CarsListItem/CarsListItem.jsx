@@ -1,3 +1,13 @@
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToFavorites } from '../../redux/carsSlice';
+import { getFavorites } from '../../redux/selectors';
+
+import Modal from '../Modal/Modal';
+import ModalContent from 'components/ModalContent/ModalContent';
+import sprite from '../../images/sprite.svg';
+import { locationCity, locationCountry } from '../../utils';
+
 import {
   Item,
   CardThumb,
@@ -13,14 +23,6 @@ import {
   FavBtn,
   Svg,
 } from './CarsListItem.styled';
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Modal from '../Modal/Modal';
-import ModalContent from 'components/ModalContent/ModalContent';
-import { locationCity, locationCountry } from '../../utils';
-import { addToFavorites } from '../../redux/carsSlice';
-import { getFavorites } from '../../redux/selectors';
-import sprite from '../../images/sprite.svg';
 
 const CarsListItem = ({ car }) => {
   const {

@@ -1,3 +1,5 @@
+import ButtonLink from 'components/ButtonLink/ButtonLink';
+
 import {
   Hero,
   Title,
@@ -8,7 +10,6 @@ import {
   ListItem,
   Content,
 } from './Home.styled';
-import ButtonLink from 'components/ButtonLink/ButtonLink';
 
 const Home = () => {
   return (
