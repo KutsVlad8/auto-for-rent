@@ -10,27 +10,18 @@ import {
   AttributeList,
   AttributeListItem,
   Btn,
+  FavBtn,
 } from './CarsListItem.styled';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Modal from '../Modal/Modal';
 import ModalContent from 'components/ModalContent/ModalContent';
 import { locationCity, locationCountry } from '../../utils';
+import { addToFavorites } from '../../redux/carsSlice';
+import { getFavorites } from '../../redux/selectors';
+import sprite from '../../images/sprite.svg';
 
 const CarsListItem = ({ car }) => {
-  const [isOpenModal, setIsOpenModal] = useState(false);
-
-  const handleOpenModal = () => {
-    const body = document.querySelector('body');
-    body.style.overflow = 'hidden';
-    setIsOpenModal(true);
-  };
-
-  const handleCloseModal = () => {
-    const body = document.querySelector('body');
-    body.style.overflow = 'auto';
-    setIsOpenModal(false);
-  };
-
   const {
     make,
     model,
@@ -47,6 +38,37 @@ const CarsListItem = ({ car }) => {
     mileage,
     rentalConditions,
   } = car;
+
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const dispatch = useDispatch();
+
+  // ================== открытие модального окна =============
+
+  const handleOpenModal = () => {
+    const body = document.querySelector('body');
+    body.style.overflow = 'hidden';
+    setIsOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    const body = document.querySelector('body');
+    body.style.overflow = 'auto';
+    setIsOpenModal(false);
+  };
+
+  // ========= добавление удаление избранного =======
+
+  const handleToggleFavorite = () => {
+    dispatch(addToFavorites(car));
+  };
+
+  const favoriteCars = useSelector(getFavorites);
+
+  const isFavorite = favoriteCars.some(
+    favoriteCar => favoriteCar.id === car.id
+  );
+
+  // const isFavorite =
 
   return (
     <>
@@ -75,6 +97,20 @@ const CarsListItem = ({ car }) => {
               <AttributeListItem>{accessories[0]}</AttributeListItem>
             </AttributeList>
             <Btn onClick={handleOpenModal}>Learn more</Btn>
+
+            {isFavorite ? (
+              <FavBtn onClick={handleToggleFavorite}>
+                <svg>
+                  <use href={sprite + `#icon-active-heart`}></use>
+                </svg>
+              </FavBtn>
+            ) : (
+              <FavBtn onClick={handleToggleFavorite}>
+                <svg>
+                  <use href={sprite + `#icon-heart-white`}></use>
+                </svg>
+              </FavBtn>
+            )}
           </Cardcontent>
         </CardThumb>
 

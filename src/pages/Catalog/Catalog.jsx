@@ -16,7 +16,6 @@ const Catalog = () => {
 
   const cars = useSelector(getCars);
   const visibleCars = cars.slice(0, displayedItems);
-  console.log(displayedItems);
 
   const loadMore = () => {
     setDisplayedItems(prevCount => prevCount + 8);
