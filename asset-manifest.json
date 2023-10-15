@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/auto-for-rent/static/css/main.7acaea2f.css",
-    "main.js": "/auto-for-rent/static/js/main.bee696aa.js",
-    "static/js/705.2bdcb8a6.chunk.js": "/auto-for-rent/static/js/705.2bdcb8a6.chunk.js",
-    "static/js/101.eb5be552.chunk.js": "/auto-for-rent/static/js/101.eb5be552.chunk.js",
-    "static/js/241.2dcef943.chunk.js": "/auto-for-rent/static/js/241.2dcef943.chunk.js",
+    "main.js": "/auto-for-rent/static/js/main.271c32eb.js",
+    "static/js/705.a8596584.chunk.js": "/auto-for-rent/static/js/705.a8596584.chunk.js",
+    "static/js/101.90c3d80d.chunk.js": "/auto-for-rent/static/js/101.90c3d80d.chunk.js",
+    "static/js/241.67ed4a73.chunk.js": "/auto-for-rent/static/js/241.67ed4a73.chunk.js",
     "static/js/959.b816abee.chunk.js": "/auto-for-rent/static/js/959.b816abee.chunk.js",
-    "static/js/873.b8b75be7.chunk.js": "/auto-for-rent/static/js/873.b8b75be7.chunk.js",
+    "static/js/674.4299a23f.chunk.js": "/auto-for-rent/static/js/674.4299a23f.chunk.js",
     "static/media/R.jpg": "/auto-for-rent/static/media/R.8410686de234290e1c67.jpg",
     "static/media/sprite.svg": "/auto-for-rent/static/media/sprite.46de9a9a65823c2d53d09a14c9dc63c5.svg",
     "index.html": "/auto-for-rent/index.html",
     "main.7acaea2f.css.map": "/auto-for-rent/static/css/main.7acaea2f.css.map",
-    "main.bee696aa.js.map": "/auto-for-rent/static/js/main.bee696aa.js.map",
-    "705.2bdcb8a6.chunk.js.map": "/auto-for-rent/static/js/705.2bdcb8a6.chunk.js.map",
-    "101.eb5be552.chunk.js.map": "/auto-for-rent/static/js/101.eb5be552.chunk.js.map",
-    "241.2dcef943.chunk.js.map": "/auto-for-rent/static/js/241.2dcef943.chunk.js.map",
+    "main.271c32eb.js.map": "/auto-for-rent/static/js/main.271c32eb.js.map",
+    "705.a8596584.chunk.js.map": "/auto-for-rent/static/js/705.a8596584.chunk.js.map",
+    "101.90c3d80d.chunk.js.map": "/auto-for-rent/static/js/101.90c3d80d.chunk.js.map",
+    "241.67ed4a73.chunk.js.map": "/auto-for-rent/static/js/241.67ed4a73.chunk.js.map",
     "959.b816abee.chunk.js.map": "/auto-for-rent/static/js/959.b816abee.chunk.js.map",
-    "873.b8b75be7.chunk.js.map": "/auto-for-rent/static/js/873.b8b75be7.chunk.js.map"
+    "674.4299a23f.chunk.js.map": "/auto-for-rent/static/js/674.4299a23f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.bee696aa.js"
+    "static/js/main.271c32eb.js"
   ]
 }
