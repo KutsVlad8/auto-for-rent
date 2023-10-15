@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
+import { colors } from '../../utils';
 
 export const Aside = styled.aside`
   position: fixed;
@@ -32,35 +33,25 @@ export const NavigationItem = styled(NavLink)`
   padding: 5px;
   border-radius: 2px;
   text-decoration: none;
-  color: #fff;
-  font-family: Gayathri;
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 
   fill: #cccccc;
 
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   &.active {
-    fill: #3470ff;
+    fill: ${colors.btnChangeColor};
   }
 
   &:hover {
-    fill: #3470ff;
+    fill: ${colors.btnChangeColor};
   }
 
   &:focus {
-    fill: #3470ff;
+    fill: ${colors.btnChangeColor};
   }
 `;
 
 export const Svg = styled.svg`
   width: 36px;
   height: 36px;
-`;
-
-export const Logo = styled.svg`
-  width: 54px;
-  height: 54px;
-  fill: red;
 `;

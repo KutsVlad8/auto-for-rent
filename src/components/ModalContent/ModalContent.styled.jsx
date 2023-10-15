@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { colors } from '../../utils';
 
 export const Item = styled.li`
   flex-basis: calc((100% - 3 * 30px) / 4);
@@ -95,7 +96,7 @@ export const Btn = styled.a`
   height: 44px;
 
   text-decoration: none;
-  color: #fff;
+  color: ${colors.btnTextColor};
   font-family: Manrope;
   font-size: 14px;
   font-style: normal;
@@ -103,11 +104,21 @@ export const Btn = styled.a`
   line-height: 1.42;
 
   border-radius: 12px;
-  background: #3470ff;
+  background-color: ${colors.btnColor};
 
   outline: none;
   border: none;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    background-color: ${colors.btnChangeColor};
+  }
+
+  &:hover {
+    background-color: ${colors.btnChangeColor};
+  }
 `;
 
 export const Text = styled.p`

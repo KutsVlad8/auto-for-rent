@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { colors } from '../../utils';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -10,7 +11,7 @@ export const Backdrop = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: ${colors.backdrop};
 `;
 
 export const ModalContent = styled.div`
@@ -37,6 +38,17 @@ export const BtnClose = styled.button`
   background-color: transparent;
   cursor: pointer;
   padding: 0;
+  fill: #121417;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    fill: #0b44cd;
+  }
+
+  &:hover {
+    fill: #0b44cd;
+  }
 `;
 
 export const Svg = styled.svg`

@@ -16,9 +16,19 @@ export const Btn = styled.button`
   line-height: 1.42;
 
   border-radius: 12px;
-  background: #3470ff;
+  background-color: #3470ff;
 
   outline: none;
   border: none;
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    background-color: #0b44cd;
+  }
+
+  &:hover {
+    background-color: #0b44cd;
+  }
 `;
